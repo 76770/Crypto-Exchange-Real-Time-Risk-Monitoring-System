@@ -17,12 +17,29 @@ The system is implemented using Python + pandas with real BTC market data.
 
 ---
 
-## System Architecture
+## Risk System Architecture
 
-Market Data → Volatility → VaR → Margin → Liquidation →  
-Bankrupt → Insurance Fund → ADL → Risk Dashboard
+```
+Market Data
+   ↓
+Rolling Volatility / VaR
+   ↓
+Margin Model (Initial / Maintenance)
+   ↓
+Account Risk Calculation
+   ↓
+Liquidation Engine
+   ↓
+Bankrupt Detection
+   ↓
+Insurance Fund
+   ↓
+ADL (Auto Deleveraging)
+   ↓
+Risk Dashboard / Monitor
+```
 
-This flow simulates the real risk control pipeline used by exchanges.
+This flow simulates the core risk control pipeline used in derivatives exchanges.
 
 ---
 
